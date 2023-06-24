@@ -17,7 +17,7 @@ export default function Home() {
       <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <Board winners={winners} setWinners={setWinners} />
       </div>
-      <div className="fixed top-1/2 right-0 text-center text-xl text-white">
+      <div className="fixed top-1/2 right-0 text-center text-xl">
         <div className=" border py-2 pr-2 transform -translate-y-1/2">
           <div>X Wins: {winners.xWins}</div>
           <div>O Wins: {winners.oWins}</div>
