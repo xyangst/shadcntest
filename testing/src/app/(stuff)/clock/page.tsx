@@ -6,6 +6,7 @@ export const metadata = {
 import { useState } from "react";
 import { FaClock } from "react-icons/fa";
 import Clock from "./clock";
+import { Settings } from "./settings";
 export default function Home() {
   const [settings, setSettings] = useState({
     showSeconds: true,
@@ -17,6 +18,7 @@ export default function Home() {
       </div>
       <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
         <Clock settings={settings} />
+        <Settings />
       </div>
     </main>
   );
