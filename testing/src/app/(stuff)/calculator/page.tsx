@@ -3,7 +3,7 @@ export const metadata = {
   description: "made by xyangst",
 };
 
-import Calculator from "@/components/calculator/calculator";
+import Calculator from "@/app/(stuff)/calculator/calculator";
 import { FaCalculator } from "react-icons/fa";
 
 export default function Home() {

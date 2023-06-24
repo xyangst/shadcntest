@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components/shadcn/input";
-import CalculatorItem from "@/components/calculator/CalculatorItem";
+import CalculatorItem from "@/app/(stuff)/calculator/CalculatorItem";
 
 import React, { useState } from "react";
 import { Label } from "@/components/shadcn/label";

@@ -1,9 +1,9 @@
 "use client";
 import Square from "./square";
 import { useState } from "react";
-import { Button } from "../shadcn/button";
-import { Switch } from "../shadcn/switch";
-import { Label } from "../shadcn/label";
+import { Button } from "../../../components/shadcn/button";
+import { Switch } from "../../../components/shadcn/switch";
+import { Label } from "../../../components/shadcn/label";
 function Board({ winners, setWinners }) {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
