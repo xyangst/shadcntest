@@ -10,7 +10,11 @@ const CalculatorItem: React.FC<CalculatorItemProps> = ({
   sign,
   handleClick,
 }) => {
-  return <Button variant="ghost" onClick={() => handleClick(sign)}>{sign}</Button>;
+  return (
+    <Button variant="ghost" onClick={() => handleClick(sign)}>
+      {sign}
+    </Button>
+  );
 };
 
 export default CalculatorItem;

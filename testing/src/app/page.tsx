@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function Home() {
   return (
     <main className="">
-      <div className=" w-full max-w-7xl items-center justify-between text-5xl font-mono lg:flex">
+      <div className=" w-full max-w-7xl items-center justify-between font-mono text-5xl lg:flex">
         Test React Stuff
       </div>
       <div className=" w-full max-w-7xl items-center justify-between lg:flex">

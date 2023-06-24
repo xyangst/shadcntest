@@ -69,9 +69,9 @@ const Calculator = () => {
   };
 
   return (
-    <div className="border pt-2 px-2">
+    <div className="border px-2 pt-2">
       <Input className="font-mono" value={inputValue} onChange={() => {}} />
-      <div className="border  grid grid-cols-4 gap-1 mt-4">
+      <div className="mt-4  grid grid-cols-4 gap-1 border">
         {items.map((item, index) => (
           <CalculatorItem
             key={index}

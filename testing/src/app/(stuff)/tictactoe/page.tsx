@@ -16,14 +16,14 @@ export default function Home() {
   });
   return (
     <main className="">
-      <div className="flex z-10 w-full max-w-8xl items-center justify-between font-mono min-w-fit text-5xl lg:flex">
+      <div className="max-w-8xl z-10 flex w-full min-w-fit items-center justify-between font-mono text-5xl lg:flex">
         React Tic Tac Toe <GiTicTacToe className="mx-2" />
       </div>
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
         <Board winners={winners} setWinners={setWinners} />
       </div>
-      <div className="fixed top-1/2 right-0 text-center text-xl">
-        <div className=" border py-2 pr-2 transform -translate-y-1/2">
+      <div className="fixed right-0 top-1/2 text-center text-xl">
+        <div className=" -translate-y-1/2 transform border py-2 pr-2">
           <div>X Wins: {winners.xWins}</div>
           <div>O Wins: {winners.oWins}</div>
           <div>Draws : {winners.draws}</div>

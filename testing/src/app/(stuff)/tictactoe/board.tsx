@@ -69,7 +69,7 @@ function Board({ winners, setWinners }) {
 
   return (
     <div className="">
-      <div className="mb-3 text-center text-sm md:text-md xl:text-xl">
+      <div className="md:text-md mb-3 text-center text-sm xl:text-xl">
         {status}
       </div>
       <div className="flex justify-center">
@@ -81,7 +81,7 @@ function Board({ winners, setWinners }) {
           <Label htmlFor="silly-mode">reverse</Label>
         </div>
         <Button
-          className="mt-3  text-sm md:text-md xl:text-xl"
+          className="md:text-md  mt-3 text-sm xl:text-xl"
           onClick={resetBoard}
         >
           Reset

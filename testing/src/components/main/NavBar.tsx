@@ -3,7 +3,7 @@ import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 export default function CommandMenu() {
   return (
-    <nav className="fixed top-1 left-1 border">
+    <nav className="fixed left-1 top-1 border">
       <Link className=" m-0 rounded-md text-3xl " href="/">
         <FaHome />
       </Link>
