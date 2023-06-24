@@ -3,9 +3,12 @@ import Head from "next/head";
 export default function Home() {
   return (
     <main className="">
-      <div className=" w-full max-w-7xl items-center justify-between text-3xl font-mono lg:flex">
-        Testing repo.
-        <br />
+      <div className=" w-full max-w-7xl items-center justify-between text-5xl font-mono lg:flex">
+        Test React Stuff
+      </div>
+      <div className=" w-full max-w-7xl items-center justify-between lg:flex">
+        small stuff that doesnt really deserve their own repository. feel free
+        to clone it or something. WIP
       </div>
       <CommandDemo />
     </main>
