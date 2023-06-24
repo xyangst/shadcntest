@@ -1,7 +1,9 @@
 "use client";
 import Square from "./square";
 import { useState } from "react";
-
+import { Button } from "../shadcn/button";
+import { Switch } from "../shadcn/switch";
+import { Label } from "../shadcn/label";
 function Board({ winners, setWinners }) {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -49,10 +51,10 @@ function Board({ winners, setWinners }) {
   const winner = calculateWinner(squares);
   const isDraw = squares.every((square) => square !== null);
   let status;
-  if (winner) {
-    status = "Winner: " + winner;
-  } else if (isDraw) {
+  if (isDraw) {
     status = "It's a draw.";
+  } else if (winner) {
+    status = "Winner: " + winner;
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
@@ -73,18 +75,21 @@ function Board({ winners, setWinners }) {
       <div className="flex justify-center">
         <div className="grid grid-cols-3 gap-0">{squareComponents}</div>
       </div>
-
-      <button
-        className="mt-3  text-sm md:text-md xl:text-xl"
-        onClick={resetBoard}
-      >
-        Reset
-      </button>
+      <div className=" text-center">
+        <div className="flex items-center space-x-2 py-2">
+          <Switch id="silly-mode" />
+          <Label htmlFor="silly-mode">reverse</Label>
+        </div>
+        <Button
+          className="mt-3  text-sm md:text-md xl:text-xl"
+          onClick={resetBoard}
+        >
+          Reset
+        </Button>
+      </div>
     </div>
   );
 }
-
-// Rest of the code remains the same
 
 function calculateWinner(squares) {
   const lines = [
@@ -104,9 +109,11 @@ function calculateWinner(squares) {
       return squares[a];
     }
   }
+  if (squares.every((element) => element !== null)) {
+    return "sex";
+  }
 
   return null;
 }
-// Rest of the code remains the same
 
 export default Board;
