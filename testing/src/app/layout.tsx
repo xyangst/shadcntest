@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NavBar />
         <main className="flex min-h-screen flex-col items-center justify-between px-24 py-3">
-          <NavBar />
           {children}
         </main>
         <Toaster />
