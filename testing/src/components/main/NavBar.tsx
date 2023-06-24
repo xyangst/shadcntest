@@ -1,5 +1,6 @@
 import { FaGithub, FaHome } from "react-icons/fa";
 import Link from "next/link";
+import DarkModeSwitch from "./DarkModeSwitch";
 export default function CommandMenu() {
   return (
     <nav className="fixed top-1 left-1 border">
@@ -13,6 +14,7 @@ export default function CommandMenu() {
       >
         <FaGithub />
       </Link>
+      <DarkModeSwitch />
     </nav>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 import { Input } from "@/components/shadcn/input";
 import CalculatorItem from "@/components/calculator/CalculatorItem";
-import { FaDeleteLeft } from "react-icons/fa";
 
 import React, { useState } from "react";
 import { Label } from "@/components/shadcn/label";
@@ -33,7 +32,6 @@ const Calculator = () => {
     { sign: "." },
     { sign: "=" },
     { sign: "*" },
-    
   ]);
   const handleClick = (sign) => {
     if (sillyMode) {

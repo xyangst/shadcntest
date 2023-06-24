@@ -1,5 +1,5 @@
 import { FaCalculator } from "react-icons/fa";
-
+import { GiTicTacToe } from "react-icons/gi";
 import {
   Command,
   CommandEmpty,
@@ -19,6 +19,10 @@ export function CommandDemo() {
           <CommandItem>
             <FaCalculator className="mr-2 h-4 w-4" />
             <Link href="/calculator">Calculator</Link>
+          </CommandItem>
+          <CommandItem>
+            <GiTicTacToe className="mr-2 h-4 w-4" />
+            <Link href="/tictactoe">Tic Tac Toe</Link>
           </CommandItem>
         </CommandGroup>
       </CommandList>
