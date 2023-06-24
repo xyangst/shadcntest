@@ -1,4 +1,4 @@
-import { FaCalculator } from "react-icons/fa";
+import { FaCalculator, FaClock } from "react-icons/fa";
 import { GiTicTacToe } from "react-icons/gi";
 import {
   Command,
@@ -18,11 +18,21 @@ export function CommandDemo() {
         <CommandGroup heading="">
           <CommandItem>
             <FaCalculator className="mr-2 h-4 w-4" />
-            <Link href="/calculator">Calculator</Link>
+            <Link className="w-full" href="/calculator">
+              Calculator
+            </Link>
           </CommandItem>
           <CommandItem>
             <GiTicTacToe className="mr-2 h-4 w-4" />
-            <Link href="/tictactoe">Tic Tac Toe</Link>
+            <Link className="w-full" href="/tictactoe">
+              Tic Tac Toe
+            </Link>
+          </CommandItem>
+          <CommandItem>
+            <FaClock className="mr-2 h-4 w-4" />
+            <Link className="w-full" href="/clock">
+              Clock
+            </Link>
           </CommandItem>
         </CommandGroup>
       </CommandList>
