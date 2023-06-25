@@ -9,6 +9,7 @@ import {
 } from "@/components/shadcn/dialog";
 import { Input } from "@/components/shadcn/input";
 import { Label } from "@/components/shadcn/label";
+import { Checkbox } from "@/components/shadcn/checkbox";
 import { FaGear } from "react-icons/fa6";
 export function Settings() {
   return (
@@ -18,7 +19,7 @@ export function Settings() {
           <FaGear />
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[350px]">
         <DialogHeader>
           <DialogTitle>Settings</DialogTitle>
         </DialogHeader>
@@ -27,13 +28,13 @@ export function Settings() {
             <Label htmlFor="name" className="text-right">
               Seconds
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Checkbox />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               ArmyTime
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Checkbox />
           </div>
         </div>
         <DialogFooter>
