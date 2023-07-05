@@ -1,7 +1,4 @@
-export const metadata = {
-  title: "Calculator",
-  description: "made by xyangst",
-};
+
 
 import Calculator from "@/app/(stuff)/calculator/calculator";
 import { FaCalculator } from "react-icons/fa";

@@ -1,7 +1,4 @@
-export const metadata = {
-  title: "Frequently Asked Questions",
-  description: "made by xyangst",
-};
+
 
 import { FaQuestion } from "react-icons/fa";
 

@@ -1,8 +1,4 @@
 "use client";
-export const metadata = {
-  title: "Tic Tac Toe",
-  description: "made by xyangst",
-};
 
 import Board from "@/app/(stuff)/tictactoe/board";
 import { GiTicTacToe } from "react-icons/gi";

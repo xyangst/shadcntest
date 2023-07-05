@@ -1,8 +1,4 @@
 "use client";
-export const metadata = {
-  title: "Calculator",
-  description: "made by xyangst",
-};
 import { useState } from "react";
 import { FaClock } from "react-icons/fa";
 import Clock from "./clock";
