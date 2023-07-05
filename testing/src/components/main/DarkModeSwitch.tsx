@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FaSun, FaMoon, FaAirbnb } from "react-icons/fa";
+import { FaSun, FaMoon } from "react-icons/fa";
 import { Button } from "../shadcn/button";
-import { Tooltip } from "../shadcn/tooltip";
+import SimpleTooltip from "../ui/SimpleTooltip";
 
 const DarkModeSwitch = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -30,17 +30,16 @@ const DarkModeSwitch = () => {
   };
 
   return (
-    <Tooltip info="switch Theme">
-          <Button
-    variant="ghost"
-      type="button"
-      onClick={toggleDarkMode}
-      className="m-0 rounded-md px-0 w-10 h-10 text-3xl"
-    >
-      {isDarkMode ? <FaAirbnb /> : <FaSun />}
-    </Button>
-    </Tooltip>
-
+    <SimpleTooltip side={"left"} content="Switch Theme">
+      <Button
+        variant="ghost"
+        type="button"
+        onClick={toggleDarkMode}
+        className="m-0 h-10 w-10 rounded-md px-0 text-3xl"
+      >
+        {isDarkMode ? <FaMoon /> : <FaSun />}
+      </Button>
+    </SimpleTooltip>
   );
 };
 

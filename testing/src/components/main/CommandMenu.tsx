@@ -1,4 +1,4 @@
-import { FaCalculator, FaClock } from "react-icons/fa";
+import { FaCalculator, FaClock, FaQuestion } from "react-icons/fa";
 import { GiTicTacToe } from "react-icons/gi";
 import {
   Command,
@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 export function CommandDemo() {
   return (
-    <Command className="rounded-lg border shadow-md">
+    <Command className="rounded-lg border">
       <CommandInput placeholder="Search" />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -32,6 +32,12 @@ export function CommandDemo() {
             <FaClock className="mr-2 h-4 w-4" />
             <Link className="w-full" href="/clock">
               Clock
+            </Link>
+          </CommandItem>
+          <CommandItem>
+            <FaQuestion className="mr-2 h-4 w-4" />
+            <Link className="w-full" href="/faq">
+              Frequently Asked Questions
             </Link>
           </CommandItem>
         </CommandGroup>

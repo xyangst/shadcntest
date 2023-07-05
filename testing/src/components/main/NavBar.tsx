@@ -2,35 +2,31 @@ import { FaGithub, FaHome } from "react-icons/fa";
 import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 import { Button } from "../shadcn/button";
-import { Tooltip} from "../shadcn/tooltip";
+import SimpleTooltip from "../ui/SimpleTooltip";
 export default function CommandMenu() {
   return (
-    <nav className="fixed left-0 top-1/2 -translate-y-1/2 p-1 m-2 border rounded-xl ">
+    <nav className="fixed left-0 top-1/2 m-2 -translate-y-1/2 rounded-xl border p-1 ">
       <div className="flex flex-col gap-3">
-        <Tooltip side="left" info="Go back Home">
-          <Button className="p-1" variant="ghost">
-        <Link className=" m-0 rounded-md w-10 h-10 text-3xl " href="/">
-          <FaHome />
-        </Link>
-        </Button>
-        </Tooltip>
-      <Tooltip side="left" info="View Source Code">
-        <Button className="p-1" variant="ghost">
-      <Link
-        target="_blank"
-        className="m-0 rounded-md w-10 h-10 text-3xl"
-        href="https://github.com/xyangst/shadcntester"
-      >
-        <FaGithub />
-      </Link>
-      </Button>
+        <SimpleTooltip side="left" content="Go back Home">
+          <Button className="h-10 w-10 rounded-md p-1 text-3xl" variant="ghost">
+            <Link href="/">
+              <FaHome />
+            </Link>
+          </Button>
+        </SimpleTooltip>
+        <SimpleTooltip side="left" content="View Source Code">
+          <Button className="h-10 w-10 rounded-md text-3xl" variant="ghost">
+            <Link
+              target="_blank"
+              href="https://github.com/xyangst/shadcntester"
+            >
+              <FaGithub />
+            </Link>
+          </Button>
+        </SimpleTooltip>
 
-      </Tooltip>
-      
-
-      <DarkModeSwitch />
+        <DarkModeSwitch />
       </div>
-
     </nav>
   );
 }
