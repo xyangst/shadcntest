@@ -18,8 +18,10 @@ export default function Home() {
       </div>
       <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
         <Clock settings={settings} />
-        <Settings />
       </div>
+      <nav className="fixed right-1 top-1 border">
+        <Settings />
+      </nav>
     </main>
   );
 }

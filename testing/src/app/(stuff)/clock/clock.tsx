@@ -13,7 +13,7 @@ const Clock = ({ settings }) => {
   }, []);
 
   const formatTime = () => {
-    const hours = time.getHours().toString().padStart(2, "0");
+    let hours = time.getHours().toString().padStart(2, "0");
     const minutes = time.getMinutes().toString().padStart(2, "0");
     const seconds = time.getSeconds().toString().padStart(2, "0");
 
