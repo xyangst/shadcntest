@@ -37,7 +37,7 @@ export function CommandDemo() {
           <CommandItem>
             <FaQuestion className="mr-2 h-4 w-4" />
             <Link className="w-full" href="/faq">
-              Frequently Asked Questions
+              Infinitely Asked Questions
             </Link>
           </CommandItem>
         </CommandGroup>

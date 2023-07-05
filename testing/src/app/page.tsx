@@ -7,7 +7,7 @@ export default function Home() {
         Test React Stuff
       </div>
       <div className=" w-full max-w-7xl items-center justify-between lg:flex">
-        small stuff that doesnt really deserve their own repository. feel free
+        small stuff that doesnt really deserve its own repository. feel free
         to clone it or something. WIP
       </div>
       <CommandDemo />
