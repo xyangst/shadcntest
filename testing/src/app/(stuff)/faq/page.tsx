@@ -33,7 +33,7 @@ export default function Home() {
       addQuestions(10);
     }
   }
-  window.addEventListener("scroll", handleScroll);
+  document.addEventListener("scroll", handleScroll);
   return (
     <main>
       <div className="z-10  mb-24 flex  w-full items-center justify-between text-xs lg:flex">
