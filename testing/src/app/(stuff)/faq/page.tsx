@@ -25,15 +25,16 @@ export default function Home() {
       addQuestion();
     }
   };
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      const { scrollTop, clientHeight, scrollHeight } =
+        document.documentElement;
 
-  function handleScroll() {
-    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-
-    if (scrollTop + clientHeight >= scrollHeight - 100) {
-      addQuestions(10);
-    }
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        addQuestions(10);
+      }
+    });
   }
-  document.addEventListener("scroll", handleScroll);
   return (
     <main>
       <div className="z-10  mb-24 flex  w-full items-center justify-between text-xs lg:flex">
