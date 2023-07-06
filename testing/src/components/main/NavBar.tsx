@@ -3,11 +3,14 @@ import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 import { Button } from "../shadcn/button";
 import SimpleTooltip from "../ui/SimpleTooltip";
+import { Separator } from "../shadcn/separator";
 export default function CommandMenu() {
   return (
-    <nav className="fixed left-0 top-1/2 m-2 -translate-y-1/2 rounded-xl border p-1 ">
+    <nav className="absolute left-0 top-1/2 m-2 -translate-y-1/2 rounded-xl border p-1 ">
+      joe
+      <Separator orientation="vertical" />
       <div className="flex flex-col gap-3">
-        <SimpleTooltip side="left" content="Go back Home">
+        <SimpleTooltip side="left" content="Go Home :)">
           <Button className="h-10 w-10 rounded-md p-1 text-3xl" variant="ghost">
             <Link href="/">
               <FaHome />

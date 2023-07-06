@@ -1,32 +1,36 @@
 "use client";
 import { FaQuestion } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Questions from "./Questions";
 
 export default function Home() {
   const [faqConfig, setFaqConfig] = useState([
     {
-      q: "Question 1",
-      a: "Answer 1",
+      q: "Is God real?",
+      a: "no.",
     },
   ]);
-  const [faqAmount, setFaqAmount] = useState(1);
-
-  const [isLoading, setIsLoading] = useState(false);
-  const addQuestion = () => {
-    setFaqConfig((prevConfig) => [
-      ...prevConfig,
-      {
-        q: "Question " + faqAmount,
-        a: "Answer " + faqAmount,
-      },
-    ]);
+  const addQuestions = (n) => {
+    const addQuestion = () => {
+      let randomNumber = Math.floor(Math.random() * 50000000000000 + 0.5);
+      setFaqConfig((prevConfig) => [
+        ...prevConfig,
+        {
+          q: "What is " + randomNumber + " + 1",
+          a: "The answer is obviously " + randomNumber + 1,
+        },
+      ]);
+    };
+    for (let i = 0; i < n; i++) {
+      addQuestion();
+    }
   };
+
   function handleScroll() {
     const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
-    if (scrollTop + clientHeight >= scrollHeight - 100 && !isLoading) {
-      addQuestion();
+    if (scrollTop + clientHeight >= scrollHeight - 100) {
+      addQuestions(10);
     }
   }
   window.addEventListener("scroll", handleScroll);
